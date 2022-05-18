@@ -1,9 +1,14 @@
+import React from 'react';
 
-function App() {
-  return (
- 
-   <h1>Hello World</h1>
-  );
-}
+import RoutesApp from './routes';
+import { GlobalStyled } from './GlobalStyled'
+
+const App = () => (
+
+    <div>
+      <GlobalStyled/>
+      < RoutesApp />
+    </div>
+)  
 
 export default App;
