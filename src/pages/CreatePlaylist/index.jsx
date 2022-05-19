@@ -23,7 +23,7 @@ import Header from '../../components/Header'
 import api from '../../services/api'
 
 import { AiOutlineDelete } from 'react-icons/ai'
-import { Popconfirm, message, Pagination } from 'antd';
+import { Popconfirm, message, Pagination, Tooltip } from 'antd';
 
 import AddAlbum from '../../components/Modals/AddAlbum'
 import AddMusic from '../../components/Modals/AddMusic'
@@ -125,16 +125,21 @@ const CreatePlaylist = () => {
                                     title={'Você realmente deseja deletar este álbum?'}
                                     onConfirm={() => { deletePlayList(res.id) }}
                                     okText="Sim" cancelText="Não">
-                                    <button ><AiOutlineDelete style={{ fontSize: 20 }} /></button>
+                                    <Tooltip placement="right" title={'Deletar Álbum'}>
+                                        <button ><AiOutlineDelete style={{ fontSize: 20 }} /></button>
+                                    </Tooltip>    
+                                    
                                 </Popconfirm>
 
                             </ListIcons>
                             <SpanAlbum>Álbum: {res.name}</SpanAlbum>
+                            <Tooltip placement="left" title={'Click no Álbum'}>
                             <div className="vinyl" onClick={() => { handleFilterId(res.id) }}>
                                 <div className="label">
 
                                 </div>
                             </div>
+                            </Tooltip>
                         </ListAlbum>
                     ))}
                     <Pagination
@@ -180,7 +185,9 @@ const CreatePlaylist = () => {
                                                             title={'Você realmente deseja deletar essa música?'}
                                                             onConfirm={() => { deleteMusic(tracks.id) }}
                                                             okText="Sim" cancelText="Não">
-                                                            <button><AiOutlineDelete style={{ fontSize: 20 }} /></button>
+                                                            <Tooltip placement="top" title={'Deletar Música'}>
+                                                                <button><AiOutlineDelete style={{ fontSize: 20 }} /></button>
+                                                            </Tooltip>
                                                         </Popconfirm>
 
                                                     </ListIcons>
