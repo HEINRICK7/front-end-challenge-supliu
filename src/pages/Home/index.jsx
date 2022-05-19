@@ -18,7 +18,7 @@ const Home = () => {
                 <SectionLeft>
                     <P>
                         Venha fazer parte do fã clube oficial “Tião Carreiro & Pardinho”.
-                        Aqui voce pode criar sua playlist com suas canções prediletas dessa dupla maravilhosa.
+                        Aqui você pode criar sua playlist com suas canções prediletas dessa dupla maravilhosa.
                     </P>
                     <Link to="/create-playlist">
                         <Button>
