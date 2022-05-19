@@ -16,7 +16,7 @@
 - [x] Excluir um álbum
 
 ---
-##Introdução ao Create React App
+## Introdução ao Create React App
 Este projeto foi inicializado com o Create React App.
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
 [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/). 
