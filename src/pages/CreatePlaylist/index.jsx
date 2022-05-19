@@ -50,7 +50,6 @@ const CreatePlaylist = () => {
             })
             .then((res) => {
                 setList(res.data.data)
-                console.log(res.data)
                 setTotalPages(res.data.total);
             })
             .catch((err) => {
