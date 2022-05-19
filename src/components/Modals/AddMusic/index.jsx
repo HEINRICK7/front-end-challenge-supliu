@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import { Modal } from 'antd'
+import { Modal, Tooltip } from 'antd'
 import { Button, Form, Input } from './styled'
-import { MdOutlineAdd, MdOutlineEdit } from 'react-icons/md'
+import { MdOutlineAdd } from 'react-icons/md'
 import api from '../../../services/api'
 
 const AddMusic = (props) => {
@@ -44,10 +44,12 @@ const AddMusic = (props) => {
         setDuration(e.target.value)
     }
     return (
-        <>
-            <Button onClick={() => setVisible(true)}>
-                <MdOutlineAdd style={{ fontSize: 20 }} />
-            </Button>
+        <>  
+            <Tooltip placement="left" title={'Add Música'}>
+                <Button onClick={() => setVisible(true)}>
+                    <MdOutlineAdd style={{ fontSize: 20 }} />
+                </Button>
+            </Tooltip>
             <Modal
                 title="Adicionar música"
                 centered
